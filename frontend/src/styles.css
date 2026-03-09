@@ -1,0 +1,257 @@
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(103, 80, 164, 0.15), transparent 28%),
+    radial-gradient(circle at top right, rgba(25, 118, 210, 0.12), transparent 24%);
+}
+
+.border-b {
+  border-bottom: 1px solid rgba(127, 127, 127, 0.12);
+}
+
+.demo-card {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+}
+
+.rich-text {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.rich-text p {
+  margin: 0 0 0.85rem;
+}
+
+.rich-text p:last-child {
+  margin-bottom: 0;
+}
+
+.rich-text ul,
+.rich-text ol {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.rich-text ul {
+  list-style-type: disc;
+}
+
+.rich-text ol {
+  list-style-type: decimal;
+}
+
+.rich-text li {
+  margin: 0.3rem 0;
+  padding-left: 0.1rem;
+}
+
+.rich-text li::marker {
+  font-size: 1em;
+}
+
+.rich-text li > p {
+  margin: 0;
+}
+
+.rich-text strong {
+  font-weight: 700;
+}
+
+.rich-text em {
+  font-style: italic;
+}
+
+.rich-text u {
+  text-decoration: underline;
+}
+
+.rich-text a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.rich-text img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.75rem 0;
+  border-radius: 12px;
+}
+
+.editor-shell {
+  overflow: hidden;
+  border: 1px solid rgba(127, 127, 127, 0.18);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.ql-toolbar.ql-snow,
+.ql-container.ql-snow {
+  border: none !important;
+}
+
+.ql-toolbar.ql-snow {
+  border-bottom: 1px solid #e5e7eb !important;
+  padding: 8px;
+}
+
+.ql-container.ql-snow {
+  min-height: 180px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.ql-editor {
+  color: #111827;
+  font-size: 15px;
+}
+
+.ql-editor.ql-blank::before {
+  color: #6b7280;
+  font-style: normal;
+}
+
+.border-preview {
+  border: 1px solid rgba(127, 127, 127, 0.18);
+}
+
+
+/* Quill visibility fixes */
+.editor-shell {
+  min-height: 260px;
+}
+
+.editor-shell .ql-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  background: #ffffff !important;
+}
+
+.editor-shell .ql-container {
+  height: 220px !important;
+  background: #ffffff !important;
+}
+
+.editor-shell .ql-editor {
+  min-height: 220px;
+  color: #111827 !important;
+  background: #ffffff !important;
+}
+
+.editor-shell .ql-stroke {
+  stroke: #374151 !important;
+}
+
+.editor-shell .ql-fill {
+  fill: #374151 !important;
+}
+
+.editor-shell .ql-picker,
+.editor-shell .ql-picker-label,
+.editor-shell .ql-picker-item,
+.editor-shell button {
+  color: #374151 !important;
+}
+
+.editor-shell button:hover .ql-stroke,
+.editor-shell button.ql-active .ql-stroke,
+.editor-shell .ql-picker-label:hover .ql-stroke,
+.editor-shell .ql-picker-label.ql-active .ql-stroke {
+  stroke: #2563eb !important;
+}
+
+.editor-shell button:hover .ql-fill,
+.editor-shell button.ql-active .ql-fill,
+.editor-shell .ql-picker-label:hover .ql-fill,
+.editor-shell .ql-picker-label.ql-active .ql-fill {
+  fill: #2563eb !important;
+}
+
+.editor-shell button:hover,
+.editor-shell button.ql-active,
+.editor-shell .ql-picker-label:hover,
+.editor-shell .ql-picker-label.ql-active {
+  color: #2563eb !important;
+}
+
+
+.rte-shell {
+  border: 1px solid rgba(127, 127, 127, 0.18);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgb(var(--v-theme-surface));
+}
+
+.rte-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.18);
+}
+
+.rte-editor {
+  min-height: 180px;
+  padding: 14px 16px;
+  outline: none;
+  color: rgb(var(--v-theme-on-surface));
+  line-height: 1.7;
+}
+
+.rte-editor:empty::before {
+  content: attr(data-placeholder);
+  color: rgba(var(--v-theme-on-surface), 0.55);
+}
+
+.rte-editor p:first-child {
+  margin-top: 0;
+}
+
+.rte-editor img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+.rte-editor ul,
+.rte-editor ol {
+  padding-left: 20px;
+}
+
+
+.app-search-field {
+  min-width: 260px;
+  max-width: 360px;
+}
+
+.tag-filter-group {
+  gap: 0;
+}
+
+.tag-filter-chip {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 860px) {
+  .app-search-field {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
