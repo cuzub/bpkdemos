@@ -40,11 +40,13 @@
 import { computed, onMounted } from 'vue'
 import { useTheme } from 'vuetify'
 import { globalSearch } from './stores/search'
-import logo from './assets/logo.svg'
+import logoLightMode from './assets/logo.svg'
+import logoDarkMode from './assets/logo_white.svg'
 
 const STORAGE_KEY = 'demo-showcase-theme'
 const theme = useTheme()
 const isDark = computed(() => theme.global.name.value === 'dark')
+const logo = computed(() => isDark.value ? logoDarkMode : logoLightMode)
 
 function applyTheme(name) {
   theme.global.name.value = name

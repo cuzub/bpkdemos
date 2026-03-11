@@ -2,7 +2,8 @@ services:
   backend:
     build:
       context: ./backend
-    container_name: demo_showcase_backend
+    image: cuzub/bpk-demo-backend
+    container_name: bpk-demo-backend
     restart: unless-stopped
     environment:
       ADMIN_USERNAME: admin
@@ -17,15 +18,11 @@ services:
   frontend:
     build:
       context: ./frontend
-      args:
-        VITE_API_BASE_URL: http://localhost:8000
-    container_name: demo_showcase_frontend
+    image: cuzub/bpk-demo-frontend
+    container_name: bpk-demo-frontend
     restart: unless-stopped
     depends_on:
       - backend
     ports:
-      - "8080:80"
+      - "8081:80"
 
-volumes:
-  demo_data:
-    driver: local
